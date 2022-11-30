@@ -7,9 +7,9 @@
  #define ONE_WIRE_BUS 2
 
 
- int SCLK = 5;
- int RCLK = 6;
- int DIO = 7;
+ int SCLK = 9;
+ int RCLK = 15;
+ int DIO = 16;
 
  TM74HC595Display disp(SCLK, RCLK, DIO);
 unsigned char SYM[39];
