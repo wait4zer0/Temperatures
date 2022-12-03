@@ -1,6 +1,6 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <Wire.h&gt  // Comes with Arduino IDE
+#include <Wire.h>  // Comes with Arduino IDE
 #include <LiquidCrystal_I2C.h>
 // Data wire is plugged into port 7 on the Arduino
 #define ONE_WIRE_BUS 7
