@@ -61,8 +61,10 @@ DallasTemperature sensors(&oneWire);
 
 void setup() {
   sensors.begin();
+  sensors.setResolution(12);
 
-  display.setBrightness (0x0a);//(0x0f) is the max brightness;
+
+  display.setBrightness ('b');  //(1-7) 7 is the max brightness;
 
   setSyncProvider(RTC.get);   // Update the time with data of RTC (Real Time Clock)
   setSyncInterval(60);        // Set the number of seconds between re-sync
@@ -111,6 +113,7 @@ void loop() {
       display.setSegments(data + (hh / 10),  1, 0);              //Display 1 (Hours - Ten)
       display.setSegments(data + (hh % 10),  1, 1);              //Display 2 (Hours - Unit)
       display.showNumberDec(mm, true, 2, 2);                     //Display 3 & 4 (Hours)
+      display.showNumberDec(mm, false, 2, 2);                     //Display 3 & 4 (Hours)
 
       break;
 
